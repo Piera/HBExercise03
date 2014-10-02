@@ -1,27 +1,5 @@
-# Declare functions
-def add(num1, num2):
-    return num1 + num2
 
-def subtract(num1, num2):
-    return num1 - num2
-
-def multiply(num1, num2):
-    return num1 * num2
-
-def divide(num1, num2):
-    return num1 / num2
-
-def square(num1):
-    return num1 ** 2
-
-def cube(num1):
-    return num1 ** 3
-
-def power(num1, num2):
-    return num1 ** num2
-
-def mod(num1, num2):
-    return num1 % num2
+from arithmetic2 import add, subtract, multiply, divide, square, cube, power, mod
 
 while True:#repeat forever unless unser enters 'q':
     try:
@@ -44,7 +22,7 @@ while True:#repeat forever unless unser enters 'q':
                 print(multiply(int(token[1]), int(token[2])))
 
             elif token[0] == "/":
-                print(divide(int(token[1]), int(token[2])))
+                print divide(float(token[1]), float(token[2]))
 
             elif token[0] == "square":
                 print(square(int(token[1])))
@@ -60,7 +38,7 @@ while True:#repeat forever unless unser enters 'q':
 
             else:
                 print("I don't understand!")
-
+                
     except ValueError:
         print("Please enter numbers! Or 'q' to quit!")
         continue
